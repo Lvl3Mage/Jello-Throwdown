@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 600820ade8c0156498a661c8f5a15c11, type: 2}
+  m_Motion: {fileID: 7400000, guid: 15e538f813326cf4489a21f25628f72c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -54,7 +54,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GameObject
+  m_Name: EnemyController
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
