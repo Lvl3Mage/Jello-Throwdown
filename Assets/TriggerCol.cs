@@ -5,16 +5,32 @@ using UnityEngine;
 public class TriggerCol : MonoBehaviour
 {
 	public bool colliding {
-		get { return colAmount != 0;}
+		get { return cols.Count != 0;}
 	}
 	public int colCount {
-		get { return colAmount;}
+		get { return cols.Count;}
 	}
-	int colAmount = 0;
+	public Collider2D[] overlapCols{
+		get { return cols.ToArray();}
+	}
+	List<Collider2D> cols = new List<Collider2D>();
 	void OnTriggerEnter2D(Collider2D other){
-		colAmount++;
+		bool contains = false;
+		for (int i = 0; i < cols.Count; i++){
+			if(cols[i] == other){
+				return;
+			}
+		}
+		cols.Add(other);
+
 	}
 	void OnTriggerExit2D(Collider2D other){
-		colAmount--;
+		for (int i = 0; i < cols.Count; i++){
+			if(cols[i] == other){
+				cols.RemoveAt(i);
+				return;
+			}
+		}
+		
 	}
 }

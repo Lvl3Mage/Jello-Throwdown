@@ -51,8 +51,9 @@ public class EnemyController : MonoBehaviour
 	}
 	IEnumerator TargetSearch(){
 		while(true){
-			target = navigation.NavToPlayer(transform.position);
+			
 			yield return new WaitForSeconds(0.2f);
+			target = navigation.NavToPlayer(transform.position);
 
 		}
 		
