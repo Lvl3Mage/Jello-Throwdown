@@ -23,11 +23,14 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] int maxAirJumps;
 	[SerializeField] Rigidbody2D rb;
 
+	
+
 	int airJumpCount = 0;
 
 	// bool jumpFlag = false;
 	// Coroutine jumpFlagRoutine;
 	bool jumpDelayed = false;
+
 	void Start()
 	{
 		
@@ -73,6 +76,14 @@ public class PlayerController : MonoBehaviour
 		jumpDelayed = true;
 		yield return new WaitForSeconds(delaySeconds);
 		jumpDelayed = false;
+	}
+	public void Disable(){
+		Collider2D[] cols = GetComponentsInChildren<Collider2D>();
+		foreach(Collider2D col in cols){
+			col.enabled = false;
+		}
+		rb.constraints = RigidbodyConstraints2D.FreezeAll;
+		this.enabled = false;
 	}
 	// IEnumerator RaiseJumpFlag(float delaySeconds){
 	// 	jumpFlag = true;

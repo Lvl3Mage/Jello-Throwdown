@@ -8,7 +8,7 @@ public class NavSystem : MonoBehaviour
 	[SerializeField] LayerMask blockingLayers;
 	const int playerLayerIndex = 6;
 
-	[SerializeField] Transform[] players;
+	Transform[] players;
 	void Awake()
 	{
 		List<Transform> children = new List<Transform>();
@@ -16,6 +16,14 @@ public class NavSystem : MonoBehaviour
 			children.Add(child);
 		}
 		NavPoints = children.ToArray();
+	}
+	void Start(){
+		Player[] activePlayers = PlayerManager.instance.GetPlayers();
+		Debug.Log(activePlayers);
+		players = new Transform[activePlayers.Length];
+		for(int i = 0; i < players.Length; i++){
+			players[i] = activePlayers[i].gameObject.transform;
+		}
 		ComputeNavPoints();
 	}
 
@@ -40,7 +48,6 @@ public class NavSystem : MonoBehaviour
 	void ComputeNavPoints(){
 		List<Transform> navPointBuffer = new List<Transform>(NavPoints);
 		NavLayers = new List<List<Transform>>();
-
 		NavLayers.Add(new List<Transform>(players));// adding the players as the closest nav points
 
 		while (navPointBuffer.Count > 0){
