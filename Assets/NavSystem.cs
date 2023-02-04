@@ -18,15 +18,16 @@ public class NavSystem : MonoBehaviour
 		NavPoints = children.ToArray();
 	}
 	void Start(){
-		Player[] activePlayers = PlayerManager.instance.GetPlayers();
-		Debug.Log(activePlayers);
+		UpdatePlayers(PlayerManager.instance.GetPlayers());
+		PlayerManager.instance.OnPlayersChanged += UpdatePlayers;
+		ComputeNavPoints();
+	}
+	void UpdatePlayers(Player[] activePlayers){
 		players = new Transform[activePlayers.Length];
 		for(int i = 0; i < players.Length; i++){
 			players[i] = activePlayers[i].gameObject.transform;
 		}
-		ComputeNavPoints();
 	}
-
 	void LateUpdate()
 	{
 		Color colorA = new Color(1, 0, 0),colorB = new Color(0, 1, 0);

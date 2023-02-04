@@ -7,14 +7,19 @@ public class PlayerGrabController : MonoBehaviour
 	[SerializeField] TriggerCol grabZone;
 	[SerializeField] Transform grabPoint;
 	[SerializeField] float maxDistance;
-	[SerializeField] GameObject PlayerBullet;
+	[SerializeField] Vector2 bulletVelocity;
+	[SerializeField] Rigidbody2D rb;
+	[SerializeField] Rigidbody2D PlayerBullet;
+	[SerializeField] KeyCode throwKey;
 	const int playerLayerIndex = 6;
 	Player grabbedPlayer;
 	void Start()
 	{
 		
 	}
+	void Update(){
 
+	}
 	void LateUpdate()
 	{
 		if(!grabbedPlayer){
@@ -22,6 +27,9 @@ public class PlayerGrabController : MonoBehaviour
 		}
 		else{
 			GrabLerp();
+			if(Input.GetKeyDown(throwKey)){
+				StartThrow();
+			}
 		}
 	}
 	void CheckGrabOverlap(){
@@ -51,8 +59,17 @@ public class PlayerGrabController : MonoBehaviour
 		controller.EnableStruggleMode();
 		grabbedPlayer = player.GetComponent<Player>();
 	}
+	void StartThrow(){
+		//Handle animator
+		ThrowPlayer(); // remove call when animating
+	}
 	void ThrowPlayer(){
-		grabbedPlayer.RemovePlayer();
-		Destroy(grabbedPlayer);
+
+		grabbedPlayer.Despawn();
+		Destroy(grabbedPlayer.gameObject);
+		Rigidbody2D bulletRB = Instantiate(PlayerBullet, grabPoint.position, grabPoint.rotation);
+		Vector2 vel = bulletVelocity;
+		vel.x *= Mathf.Sign(rb.velocity.x);
+		bulletRB.velocity = vel;
 	}
 }

@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+	[SerializeField] PlayerTeam playerTeam;
+	const float respawnTime = 1f, reviveTime = 5f;
+	public PlayerTeam team
+	{
+		get{
+			return playerTeam;
+		}
+	}
 	void Start()
 	{
 		// Debug.Log(PlayerManager.instance);
@@ -14,7 +22,14 @@ public class Player : MonoBehaviour
 	{
 		
 	}
-	public void RemovePlayer(){
-		PlayerManager.instance.RemovePlayer(this);
+	public void Despawn(){
+		PlayerManager.instance.RemovePlayer(this, respawnTime);
 	}
+	public void DestroyPlayer(){
+		PlayerManager.instance.RemovePlayer(this, reviveTime);
+	}
+}
+public enum PlayerTeam{
+	A,
+	B
 }

@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 	[System.Serializable]
 	public struct CameraConfig
 	{
-		[SerializeField] public Transform[] trackedObjects;
+		[HideInInspector] public Transform[] trackedObjects;
 
 
 		[SerializeField] public float baseZoom;
@@ -18,11 +18,18 @@ public class CameraController : MonoBehaviour
 	[SerializeField] Camera camera;
 	[SerializeField] CameraConfig cameraConfig;
 
-	void Awake()
+	void Start()
 	{
 		// cameraConfig.trackedObjects = new Transform[]{};
+		PlayersUpdated(PlayerManager.instance.GetPlayers());
+		PlayerManager.instance.OnPlayersChanged += PlayersUpdated;
 	}
-
+	void PlayersUpdated(Player[] players){
+		cameraConfig.trackedObjects = new Transform[players.Length];
+		for(int i = 0; i < players.Length; i++){
+			cameraConfig.trackedObjects[i] = players[i].gameObject.transform;
+		}
+	}
 	public void SetTrackedObjects(Transform[] newTrackedObjects){
 		cameraConfig.trackedObjects = newTrackedObjects;
 	}
