@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 9ceeded6e6ec1a146a811f6a03a91261
+guid: bf85097b50361b247aa74b4b90d0c4d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7911470766556432983
-    second: Tuberia_0
+      213: 2401116221704664648
+    second: Tuberia 1_0
   - first:
-      213: 2193189369884476374
-    second: Tuberia_1
+      213: 4169775646693495051
+    second: Tuberia 1_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tuberia_0
+      name: Tuberia 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 500
-        width: 690
-        height: 500
+        y: 33
+        width: 46
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75acb73deb03bcd60800000000000000
-      internalID: 7911470766556432983
+      spriteID: 84672236b7a725120800000000000000
+      internalID: 2401116221704664648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tuberia_1
+      name: Tuberia 1_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 690
-        height: 500
+        width: 46
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d38025ac16cf6e10800000000000000
-      internalID: 2193189369884476374
+      spriteID: b019d36bbd40ed930800000000000000
+      internalID: 4169775646693495051
       vertices: []
       indices: 
       edges: []
