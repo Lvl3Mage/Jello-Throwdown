@@ -11,14 +11,21 @@ public class PlayerGrabController : MonoBehaviour
 	[SerializeField] Rigidbody2D rb;
 	[SerializeField] Rigidbody2D PlayerBullet;
 	[SerializeField] KeyCode throwKey;
+	[SerializeField] Player selfPlayer;
+	[SerializeField] GameObject SmallPlayerPrefab;
 	const int playerLayerIndex = 6;
 	Player grabbedPlayer;
 	void Start()
 	{
-		
+		PlayerManager.instance.OnPlayersChanged += UpdatePlayers;
 	}
-	void Update(){
-
+	void UpdatePlayers(Player[] players){
+		if(players.Length == 1 && players[0] == selfPlayer){
+			//await animation
+			Instantiate(SmallPlayerPrefab, transform.position, Quaternion.identity);
+			selfPlayer.Despawn();
+			Destroy(gameObject);
+		}
 	}
 	void LateUpdate()
 	{
@@ -65,11 +72,14 @@ public class PlayerGrabController : MonoBehaviour
 	}
 	void ThrowPlayer(){
 
-		grabbedPlayer.Despawn();
-		Destroy(grabbedPlayer.gameObject);
+		
 		Rigidbody2D bulletRB = Instantiate(PlayerBullet, grabPoint.position, grabPoint.rotation);
 		Vector2 vel = bulletVelocity;
 		vel.x *= Mathf.Sign(rb.velocity.x);
 		bulletRB.velocity = vel;
+		BulletController bullet = bulletRB.gameObject.GetComponent<BulletController>();
+		bullet.SetTeam(grabbedPlayer.team);
+		grabbedPlayer.Despawn();
+		Destroy(grabbedPlayer.gameObject);
 	}
 }

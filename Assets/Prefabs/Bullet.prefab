@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 317727386498095135}
   - component: {fileID: 5505656860067011458}
   - component: {fileID: 3822592919446279071}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0051978eaa0d04bb2808b7deef25f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTravelDistance: 25
+  maxTravelDistance: 15
+  maxLifetime: 3
   DestructionEffect: {fileID: 0}
 --- !u!1 &5822442127853766996
 GameObject:
@@ -79,7 +80,7 @@ GameObject:
   - component: {fileID: 1298006148017897538}
   - component: {fileID: 6004716960549461397}
   - component: {fileID: 7770695796933435584}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -558,6 +558,8 @@ MonoBehaviour:
   rb: {fileID: 8654914176391198314}
   PlayerBullet: {fileID: 5505656860067011458, guid: ea3bee0cd18c3c24aa79a8bcbaf9c1b9, type: 3}
   throwKey: 115
+  selfPlayer: {fileID: 8654914176391198318}
+  SmallPlayerPrefab: {fileID: 6639725847739843160, guid: 274f56d3c73ce034b99a2875dc8d1955, type: 3}
 --- !u!114 &8654914176391198318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,3 +573,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTeam: 0
+  DestructionEffect: {fileID: 0}

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 	[SerializeField] PlayerTeam playerTeam;
-	const float respawnTime = 1f, reviveTime = 5f;
+	[SerializeField] GameObject DestructionEffect;
+	const float reviveTime = 5f;
 	public PlayerTeam team
 	{
 		get{
@@ -14,19 +15,16 @@ public class Player : MonoBehaviour
 	}
 	void Start()
 	{
-		// Debug.Log(PlayerManager.instance);
 		PlayerManager.instance.AddPlayer(this);
 	}
-
-	void Update()
-	{
-		
-	}
 	public void Despawn(){
-		PlayerManager.instance.RemovePlayer(this, respawnTime);
+		PlayerManager.instance.RemovePlayer(this);
 	}
 	public void DestroyPlayer(){
-		PlayerManager.instance.RemovePlayer(this, reviveTime);
+		PlayerManager.instance.RemovePlayer(this);
+		PlayerManager.instance.SpawnPlayer(reviveTime, team);
+		// Instantiate(DestructionEffect,transform.position,transform.rotation);
+		Destroy(gameObject);
 	}
 }
 public enum PlayerTeam{

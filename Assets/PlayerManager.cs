@@ -29,12 +29,15 @@ public class PlayerManager : MonoBehaviour
 		UpdatePlayers();
 	}
 	// public void ReplacePlayer
-	public void RemovePlayer(Player player, float respawnTime){
+	public void SpawnPlayer(float respawnTime, PlayerTeam team){
+		StartCoroutine(RespawnPlayer(respawnTime, team));
+	}
+	public void RemovePlayer(Player player){
 		for(int i = 0; i < players.Count; i++){
 			if(players[i] == player){
 				players.RemoveAt(i);
 				UpdatePlayers();
-				StartCoroutine(RespawnPlayer(respawnTime, player.team));
+				
 				return;
 			}
 		}
@@ -48,7 +51,7 @@ public class PlayerManager : MonoBehaviour
 			OnPlayersChanged.Invoke(players.ToArray());
 		}
 	}
-	public IEnumerator RespawnPlayer(float respawnTime, PlayerTeam team){
+	IEnumerator RespawnPlayer(float respawnTime, PlayerTeam team){
 		yield return new WaitForSeconds(respawnTime);
 		Instantiate(GetPlayerPrefab(team), spawnPoint.position, Quaternion.identity);
 	}

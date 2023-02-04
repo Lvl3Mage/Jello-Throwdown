@@ -75,5 +75,9 @@ PrefabInstance:
       propertyPath: throwKey
       value: 274
       objectReference: {fileID: 0}
+    - target: {fileID: 8654914176391198319, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: SmallPlayerPrefab
+      value: 
+      objectReference: {fileID: 9123485535863518820, guid: 5818b1f2d02628949b5d3c1bcfd344ce, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
