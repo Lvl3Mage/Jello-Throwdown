@@ -1,34 +1,49 @@
 fileFormatVersion: 2
-guid: 6244ec455996b884e9b6bd0f82819691
+guid: 3bd724e53718ec940983fca3a09c0efa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2791661481131250661
-    second: Background (4)_0
+      213: 9185323719981418078
+    second: TilePalette_0
   - first:
-      213: -2573780848359248661
-    second: Background (4)_1
+      213: 3366286211708786001
+    second: TilePalette_1
   - first:
-      213: 7192483607456735235
-    second: Background (4)_2
+      213: 5369809844014989455
+    second: TilePalette_2
   - first:
-      213: -4345377158554502910
-    second: Background (4)_3
+      213: 7937023434684249089
+    second: TilePalette_3
   - first:
-      213: 8269993744414684207
-    second: Background (4)_4
+      213: 3716455920043268738
+    second: TilePalette_4
   - first:
-      213: -5007694307360976282
-    second: Background (4)_5
+      213: 5477536444748164929
+    second: TilePalette_5
   - first:
-      213: -6983806945965159322
-    second: Background (4)_6
+      213: 6687956420773180231
+    second: TilePalette_6
   - first:
-      213: -4145427877401788980
-    second: Background (4)_7
+      213: 6705974385102418975
+    second: TilePalette_7
   - first:
-      213: -7609749717212578094
-    second: Background (4)_8
+      213: 6828688581920915829
+    second: TilePalette_8
+  - first:
+      213: 4650556438001074216
+    second: TilePalette_9
+  - first:
+      213: -463851110252002017
+    second: TilePalette_10
+  - first:
+      213: -5684740138921823859
+    second: TilePalette_11
+  - first:
+      213: 7923301034849515297
+    second: TilePalette_12
+  - first:
+      213: -5862533551390596503
+    second: TilePalette_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Background (4)_0
+      name: TilePalette_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1000
-        width: 500
-        height: 500
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e318f38359fdb620800000000000000
-      internalID: 2791661481131250661
+      spriteID: e564674e143d87f70800000000000000
+      internalID: 9185323719981418078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background (4)_1
+      name: TilePalette_1
       rect:
         serializedVersion: 2
-        x: 500
-        y: 1000
-        width: 500
-        height: 500
+        x: 20
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bece7d374f7184cd0800000000000000
-      internalID: -2573780848359248661
+      spriteID: 1559235697377be20800000000000000
+      internalID: 3366286211708786001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background (4)_2
+      name: TilePalette_2
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 1000
-        width: 500
-        height: 500
+        x: 40
+        y: 40
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +189,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 300674bcbb5d0d360800000000000000
-      internalID: 7192483607456735235
+      spriteID: f80c8e74a95658a40800000000000000
+      internalID: 5369809844014989455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background (4)_3
+      name: TilePalette_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 40
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1043e4ef2c8f52e60800000000000000
+      internalID: 7937023434684249089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePalette_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a9399f7f0839330800000000000000
+      internalID: 3716455920043268738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePalette_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 500
-        width: 500
-        height: 500
+        y: 20
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20933414f7e12b3c0800000000000000
-      internalID: -4345377158554502910
+      spriteID: 14f6871106e140c40800000000000000
+      internalID: 5477536444748164929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background (4)_4
+      name: TilePalette_6
       rect:
         serializedVersion: 2
-        x: 500
-        y: 500
-        width: 500
-        height: 500
+        x: 20
+        y: 20
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f243a868e7be4c270800000000000000
-      internalID: 8269993744414684207
+      spriteID: 7437a7d2ee460dc50800000000000000
+      internalID: 6687956420773180231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background (4)_5
+      name: TilePalette_7
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 500
-        width: 500
-        height: 500
+        x: 40
+        y: 20
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +294,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 662d0023f88118ab0800000000000000
-      internalID: -5007694307360976282
+      spriteID: f14f5e86c28601d50800000000000000
+      internalID: 6705974385102418975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background (4)_6
+      name: TilePalette_8
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 20
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5718927d51064ce50800000000000000
+      internalID: 6828688581920915829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePalette_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 20
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820c5fec0781a8040800000000000000
+      internalID: 4650556438001074216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePalette_10
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 500
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,20 +357,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66c47dd9598841f90800000000000000
-      internalID: -6983806945965159322
+      spriteID: f1542c07fd11099f0800000000000000
+      internalID: -463851110252002017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background (4)_7
+      name: TilePalette_11
       rect:
         serializedVersion: 2
-        x: 500
+        x: 20
         y: 0
-        width: 500
-        height: 500
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,20 +378,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccdf6751f4b7876c0800000000000000
-      internalID: -4145427877401788980
+      spriteID: d81f82376febb11b0800000000000000
+      internalID: -5684740138921823859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background (4)_8
+      name: TilePalette_12
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 40
         y: 0
-        width: 500
-        height: 500
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,8 +399,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2de3aeb43fcb46690800000000000000
-      internalID: -7609749717212578094
+      spriteID: 127b0becf4835fd60800000000000000
+      internalID: 7923301034849515297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilePalette_13
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962ed89cbc814aea0800000000000000
+      internalID: -5862533551390596503
       vertices: []
       indices: 
       edges: []
