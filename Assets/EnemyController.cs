@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
 	[SerializeField] float leapStrength;
 	[SerializeField] float jumpDelayTime;
 	[SerializeField] float airspeedFactor;
+	[SerializeField] float minJumpHeightDif;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -30,13 +31,13 @@ public class EnemyController : MonoBehaviour
 			airAccelMultiplier = airspeedFactor;
 		}
 		// Vector2 target = navigation.NavToPlayer(transform.position);
-		// Debug.DrawLine(transform.position, target, Color.green);
+		Debug.DrawLine(transform.position, target, Color.green);
 		//Get Nav Target
 		Vector2 targetDelta = target - (Vector2)transform.position;
 		//Horizontal Movement
 		rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, Mathf.Sign(targetDelta.x)*speed, Time.deltaTime*acceleration*airAccelMultiplier), rb.velocity.y);
 
-		if(targetDelta.y > 2 && activeJumpTriggers > 0 && !jumpDelayed){
+		if(targetDelta.y > minJumpHeightDif && activeJumpTriggers > 0 && !jumpDelayed){
 			rb.velocity = new Vector2(rb.velocity.x*leapStrength, jumpStrength);
 			StartCoroutine(JumpDelay(jumpDelayTime));
 		}

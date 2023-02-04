@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 	[System.Serializable]
 	public struct CameraConfig
 	{
-		[HideInInspector] public Transform[] trackedObjects;
+		[SerializeField] public Transform[] trackedObjects;
 
 
 		[SerializeField] public float baseZoom;
