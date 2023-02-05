@@ -51,15 +51,15 @@ public class PlayerController : MonoBehaviour
 			airJumpCount = 0;
 		}
 		if(Input.GetKeyDown(jump) && !jumpDelayed){
-			if(canJump()){
+			if(canJump() || airJumpCount < maxAirJumps){
 				StartCoroutine(JumpDelay(jumpDelayTime));
 				rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
 			}
-			else if(airJumpCount < maxAirJumps){
-				StartCoroutine(JumpDelay(jumpDelayTime));
-				rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + jumpSpeed);
-				airJumpCount++;
-			}
+			// else if(airJumpCount < maxAirJumps){
+			// 	StartCoroutine(JumpDelay(jumpDelayTime));
+			// 	rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + jumpSpeed);
+			// 	airJumpCount++;
+			// }
 			
 		}
 	}

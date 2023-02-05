@@ -28823,7 +28823,7 @@ CompositeCollider2D:
       - {x: 3.125, y: 1.2499707}
       - {x: 3.1250293, y: 0}
   m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
+  m_OffsetDistance: 0.1
 --- !u!19719996 &1116063222
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -28839,7 +28839,7 @@ TilemapCollider2D:
   m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
+  m_ExtrusionFactor: 0.1
 --- !u!1 &2408919252146670310
 GameObject:
   m_ObjectHideFlags: 0

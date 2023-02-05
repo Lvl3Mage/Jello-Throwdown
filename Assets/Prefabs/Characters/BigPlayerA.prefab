@@ -461,10 +461,10 @@ MonoBehaviour:
   left: 97
   right: 100
   jump: 119
-  moveSpeed: 7
-  groundAcceleration: 4
+  moveSpeed: 8
+  groundAcceleration: 8
   airAcceleration: 2
-  jumpSpeed: 13
+  jumpSpeed: 12
   jumpDelayTime: 0.2
   maxAirJumps: 0
   rb: {fileID: 8654914176391198314}
@@ -489,7 +489,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 314801efd7ac9c843a25a7092c062589, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &8654914176391198319
 MonoBehaviour:
