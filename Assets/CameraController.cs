@@ -24,18 +24,38 @@ public class CameraController : MonoBehaviour
 		UpdatePlayers(PlayerManager.instance.GetPlayers());
 		PlayerManager.instance.OnPlayersChanged += UpdatePlayers;
 	}
+	Transform[] trackedPlayers;
 	void UpdatePlayers(Player[] players){
-		cameraConfig.trackedObjects = new Transform[players.Length];
+		trackedPlayers = new Transform[players.Length];
 		for(int i = 0; i < players.Length; i++){
-			cameraConfig.trackedObjects[i] = players[i].gameObject.transform;
+			trackedPlayers[i] = players[i].gameObject.transform;
 		}
 	}
-	public void SetTrackedObjects(Transform[] newTrackedObjects){
-		cameraConfig.trackedObjects = newTrackedObjects;
+	// public void SetTrackedObjects(Transform[] newTrackedObjects){
+	// 	cameraConfig.trackedObjects = newTrackedObjects;
+	// }
+	List<Transform> trackers = new List<Transform>();
+	public void AddTracker(Transform tracker){
+		trackers.Add(tracker);
+	}
+	void SanitizeTrackers(){
+		for(int i = 0; i < trackers.Count; i++){
+			if(trackers[i] == null){
+				trackers.RemoveAt(i);
+			}
+		}
 	}
 
 	//Cam controlling
 	void FixedUpdate(){
+		SanitizeTrackers();
+		cameraConfig.trackedObjects = new Transform[trackedPlayers.Length + trackers.Count];
+		for(int i = 0; i < trackedPlayers.Length; i++){
+			cameraConfig.trackedObjects[i] = trackedPlayers[i];
+		}
+		for(int i = 0; i < trackers.Count; i++){
+			cameraConfig.trackedObjects[trackedPlayers.Length+i] = trackers[i];
+		}
 		if(cameraConfig.trackedObjects.Length == 0){
 			return;
 		}

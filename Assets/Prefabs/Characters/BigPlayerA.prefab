@@ -513,6 +513,8 @@ MonoBehaviour:
   selfPlayer: {fileID: 8654914176391198318}
   SmallPlayerPrefab: {fileID: 6639725847739843160, guid: 274f56d3c73ce034b99a2875dc8d1955, type: 3}
   animator: {fileID: 4945283591028561170}
+  xSpawnVelRange: {x: 5, y: 50}
+  ySpawnVelRange: {x: -1, y: 1}
 --- !u!114 &8654914176391198318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,7 +568,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -4496702377800771008, guid: 7c6ac66329afa684292872aa9ce000c8, type: 3}
   m_Color: {r: 0.56199455, g: 1, b: 0.8570405, a: 0.78431374}
   m_FlipX: 0

@@ -14,12 +14,15 @@ public class BigPlayerController : MonoBehaviour
 	[SerializeField] Player selfPlayer;
 	[SerializeField] GameObject SmallPlayerPrefab;
 	[SerializeField] Animator animator;
+	[SerializeField] Vector2 xSpawnVelRange, ySpawnVelRange;
 	const int playerLayerIndex = 6;
 	Player grabbedPlayer;
 	void Start()
 	{
 		selfPlayer.OnDestruction += PlayerDestroyed;
 		PlayerManager.instance.OnPlayersChanged += UpdatePlayers;
+		Vector2 spawnVel = new Vector2(Random.Range(xSpawnVelRange.x, xSpawnVelRange.y),Random.Range(ySpawnVelRange.x, ySpawnVelRange.y));
+		rb.velocity = spawnVel;
 	}
 	void PlayerDestroyed(){
 		if(grabbedPlayer){

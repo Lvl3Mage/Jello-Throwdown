@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 317727386498095135}
   - component: {fileID: 5505656860067011458}
   - component: {fileID: 3822592919446279071}
+  - component: {fileID: 1309657607231114099}
   m_Layer: 10
   m_Name: BulletA
   m_TagString: Untagged
@@ -114,10 +115,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0051978eaa0d04bb2808b7deef25f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTravelDistance: 5
+  minTravelDistance: 5
   maxLifetime: 3
   DestructionEffect: {fileID: 5088170297738546656, guid: 9cdd37de31855994c80ae4b7286a7db9, type: 3}
   rb: {fileID: 5505656860067011458}
+--- !u!114 &1309657607231114099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4899093918084231177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee30d77f53c0234dafde626cb9a53da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5822442127853766996
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +202,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 1838474501635095699, guid: 96e3305cdfa80774295332ab7d0a1ae7, type: 3}
   m_Color: {r: 0.56078434, g: 1, b: 0.85882354, a: 0.78431374}
   m_FlipX: 0

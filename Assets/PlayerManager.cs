@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
 	[SerializeField] GameObject TeamACharacter;
 	[SerializeField] GameObject TeamBCharacter;
 	[SerializeField] Animator gameOverMenu;
+	[SerializeField] RespawnHUDManager respawnHUDManager;
 	[SerializeField] float slowMotionSpeed, slowMotionLerpTime;
 
 	List<Player> players = new List<Player>();
@@ -61,6 +62,7 @@ public class PlayerManager : MonoBehaviour
 		SlowMotion.LerpSlowDown(slowMotionSpeed, slowMotionLerpTime, this);
 	}
 	IEnumerator RespawnPlayer(float respawnTime, PlayerTeam team){
+		respawnHUDManager.AddRespawn(team, respawnTime);
 		yield return new WaitForSeconds(respawnTime);
 		if(players.Count != 0){
 			Instantiate(GetPlayerPrefab(team), spawnPoint.position, Quaternion.identity);
