@@ -515,6 +515,10 @@ MonoBehaviour:
   animator: {fileID: 4945283591028561170}
   xSpawnVelRange: {x: 15, y: 75}
   ySpawnVelRange: {x: -1, y: 1}
+  stompRadius: 3
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!114 &8654914176391198318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeam: 0
   DestructionEffect: {fileID: 6501153884391652386, guid: 0d86054e0c66c4a4f880bbffa1f0cc5d, type: 3}
+  invulnerable: 0
 --- !u!212 &926164285883793682
 SpriteRenderer:
   m_ObjectHideFlags: 0
