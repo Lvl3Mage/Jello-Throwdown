@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: playerTeam
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6639725847739843159, guid: 274f56d3c73ce034b99a2875dc8d1955, type: 3}
+      propertyPath: DestructionEffect
+      value: 
+      objectReference: {fileID: 5705646143830138272, guid: b9a15d972797ac2419204f72cc41c9e8, type: 3}
     - target: {fileID: 6639725847739843160, guid: 274f56d3c73ce034b99a2875dc8d1955, type: 3}
       propertyPath: m_Name
       value: SmallPlayerB Variant

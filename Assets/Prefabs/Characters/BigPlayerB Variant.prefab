@@ -83,6 +83,10 @@ PrefabInstance:
       propertyPath: playerTeam
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8654914176391198318, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: DestructionEffect
+      value: 
+      objectReference: {fileID: 6068571224820511482, guid: f2ab4a01335311542b2c9d101f15e126, type: 3}
     - target: {fileID: 8654914176391198319, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
       propertyPath: throwKey
       value: 274
@@ -91,6 +95,10 @@ PrefabInstance:
       propertyPath: PlayerBullet
       value: 
       objectReference: {fileID: 5505656860067011458, guid: ea3bee0cd18c3c24aa79a8bcbaf9c1b9, type: 3}
+    - target: {fileID: 8654914176391198319, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: bulletVelocity.x
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8654914176391198319, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
       propertyPath: SmallPlayerPrefab
       value: 

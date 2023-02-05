@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3822592919446279071, guid: ea3bee0cd18c3c24aa79a8bcbaf9c1b9, type: 3}
+      propertyPath: DestructionEffect
+      value: 
+      objectReference: {fileID: 5705646143830138272, guid: b9a15d972797ac2419204f72cc41c9e8, type: 3}
     - target: {fileID: 4899093918084231177, guid: ea3bee0cd18c3c24aa79a8bcbaf9c1b9, type: 3}
       propertyPath: m_Name
       value: BulletB Variant

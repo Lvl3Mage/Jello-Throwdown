@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
 	public void DestroyPlayer(){
 		PlayerManager.instance.RemovePlayer(this);
 		PlayerManager.instance.SpawnPlayer(reviveTime, team);
-		// Instantiate(DestructionEffect,transform.position,transform.rotation);
+		Instantiate(DestructionEffect,transform.position,transform.rotation);
 		if(OnDestruction != null){
 			OnDestruction.Invoke();
 		}

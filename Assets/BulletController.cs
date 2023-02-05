@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour // spaghetti xd
 {
 	const float respawnTime = 1f;
-	[SerializeField] float maxTravelDistance;
+	[SerializeField] float minTravelDistance = 5;
 	[SerializeField] float maxLifetime = 1;
 	[SerializeField] GameObject DestructionEffect;
 	[SerializeField] Rigidbody2D rb;
@@ -29,7 +29,7 @@ public class BulletController : MonoBehaviour // spaghetti xd
 		transform.rotation = Quaternion.Euler(0,0,Mathf.Atan2(rb.velocity.y, rb.velocity.x)*Mathf.Rad2Deg);
 	}
 	void OnCollisionEnter2D(Collision2D col){
-		if(accumDistance > maxTravelDistance){
+		if(accumDistance > minTravelDistance){
 			DestroyBullet();
 		}
 	}
@@ -48,7 +48,7 @@ public class BulletController : MonoBehaviour // spaghetti xd
 			return;
 		}
 		destroyed = true;
-		// Instantiate(DestructionEffect,transform.position, Quaternion.Identity);
+		Instantiate(DestructionEffect,transform.position, Quaternion.identity);
 		PlayerManager.instance.SpawnPlayer(respawnTime, team);
 		Destroy(gameObject);
 

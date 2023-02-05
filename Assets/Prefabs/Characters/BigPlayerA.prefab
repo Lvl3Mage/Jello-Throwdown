@@ -506,7 +506,7 @@ MonoBehaviour:
   grabZone: {fileID: 8654914175591493993}
   grabPoint: {fileID: 8654914174590947344}
   maxDistance: 0.05
-  bulletVelocity: {x: 20, y: 0}
+  bulletVelocity: {x: 50, y: 0}
   rb: {fileID: 8654914176391198314}
   PlayerBullet: {fileID: 6745623971336021418, guid: e2f61c3573e3e47499830b24261685fc, type: 3}
   throwKey: 115
@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTeam: 0
-  DestructionEffect: {fileID: 0}
+  DestructionEffect: {fileID: 6501153884391652386, guid: 0d86054e0c66c4a4f880bbffa1f0cc5d, type: 3}
 --- !u!212 &926164285883793682
 SpriteRenderer:
   m_ObjectHideFlags: 0

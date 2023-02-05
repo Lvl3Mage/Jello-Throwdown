@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTeam: 0
-  DestructionEffect: {fileID: 0}
+  DestructionEffect: {fileID: 5088170297738546656, guid: 9cdd37de31855994c80ae4b7286a7db9, type: 3}
 --- !u!95 &4774484807885235459
 Animator:
   serializedVersion: 3

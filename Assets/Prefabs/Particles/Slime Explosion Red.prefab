@@ -284,8 +284,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 0.7
+      scalar: 0.8
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.4
       mode: 0
       spread: 0
       speed:
@@ -1040,13 +1040,22 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.4324314
+          value: 0.2580158
           inSlope: 1.5400794
           outSlope: 1.5400794
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.21358225
+        - serializedVersion: 3
+          time: 0.16121621
+          value: 0.8595946
+          inSlope: 0.46742243
+          outSlope: 0.46742243
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.9253035
+          outWeight: 0.33333334
         - serializedVersion: 3
           time: 0.70114803
           value: 0.8303394
@@ -3855,7 +3864,7 @@ ParticleSystem:
     radiusScale: 0.5
     collidesWith:
       serializedVersion: 2
-      m_Bits: 1
+      m_Bits: 257
     maxCollisionShapes: 60
     quality: 0
     voxelSize: 0.5

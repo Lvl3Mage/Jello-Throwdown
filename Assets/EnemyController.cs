@@ -79,7 +79,7 @@ public class EnemyController : MonoBehaviour
 	}
 	public void DestroyEnemy(){
 		Destroy(gameObject);
-		// Instantiate(DestructionEffect, transform.position, Quaternion.identity);
+		Instantiate(DestructionEffect, transform.position, Quaternion.identity);
 	}
 	public void AddJumpTrigger(){
 		activeJumpTriggers++;

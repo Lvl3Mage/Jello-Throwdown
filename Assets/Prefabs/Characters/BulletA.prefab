@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c0051978eaa0d04bb2808b7deef25f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTravelDistance: 15
+  maxTravelDistance: 5
   maxLifetime: 3
-  DestructionEffect: {fileID: 0}
+  DestructionEffect: {fileID: 5088170297738546656, guid: 9cdd37de31855994c80ae4b7286a7db9, type: 3}
   rb: {fileID: 5505656860067011458}
 --- !u!1 &5822442127853766996
 GameObject:
