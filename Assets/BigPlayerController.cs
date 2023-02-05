@@ -15,7 +15,10 @@ public class BigPlayerController : MonoBehaviour
 	[SerializeField] GameObject SmallPlayerPrefab;
 	[SerializeField] Animator animator;
 	[SerializeField] Vector2 xSpawnVelRange, ySpawnVelRange;
+	[SerializeField] float stompRadius = 5;
+	[SerializeField] LayerMask enemyLayers;
 	const int playerLayerIndex = 6;
+	bool collided = false;
 	Player grabbedPlayer;
 	void Start()
 	{
@@ -23,6 +26,7 @@ public class BigPlayerController : MonoBehaviour
 		PlayerManager.instance.OnPlayersChanged += UpdatePlayers;
 		Vector2 spawnVel = new Vector2(Random.Range(xSpawnVelRange.x, xSpawnVelRange.y),Random.Range(ySpawnVelRange.x, ySpawnVelRange.y));
 		rb.velocity = spawnVel;
+		selfPlayer.invulnerable = true;
 	}
 	void PlayerDestroyed(){
 		if(grabbedPlayer){
@@ -98,5 +102,18 @@ public class BigPlayerController : MonoBehaviour
 		bullet.SetTeam(grabbedPlayer.team);
 		grabbedPlayer.Despawn();
 		Destroy(grabbedPlayer.gameObject);
+	}
+	void OnCollisionEnter2D(Collision2D col){
+		if(!collided){
+			collided = true;
+			selfPlayer.invulnerable = false;
+			Stomp();
+		}
+	}
+	void Stomp(){
+		Collider2D[] cols = Physics2D.OverlapCircleAll(transform.position, stompRadius, enemyLayers);
+		foreach(Collider2D col in cols){
+			col.attachedRigidbody.gameObject.GetComponent<EnemyController>().DestroyEnemy(100);
+		}
 	}
 }

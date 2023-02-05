@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 	public delegate void DestructionHandler();
 	public event DestructionHandler OnDestruction;
 	const float reviveTime = 5f;
+	[HideInInspector] public bool invulnerable = false;
 	public PlayerTeam team
 	{
 		get{
@@ -39,6 +40,9 @@ public class Player : MonoBehaviour
 		PlayerManager.instance.RemovePlayer(this);
 	}
 	public void DestroyPlayer(){
+		if(invulnerable){
+			return;
+		}
 		PlayerManager.instance.RemovePlayer(this);
 		PlayerManager.instance.SpawnPlayer(reviveTime, team);
 		Instantiate(DestructionEffect,transform.position,transform.rotation);
