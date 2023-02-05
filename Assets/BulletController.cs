@@ -9,7 +9,7 @@ public class BulletController : MonoBehaviour // spaghetti xd
 	[SerializeField] float maxLifetime = 1;
 	[SerializeField] GameObject DestructionEffect;
 	[SerializeField] Rigidbody2D rb;
-
+	const int EnemyLayerIndex = 11;
 	Vector2 pastPos;
 	float accumDistance = 0;
 	Coroutine lifetimeRoutine;
@@ -31,6 +31,12 @@ public class BulletController : MonoBehaviour // spaghetti xd
 	void OnCollisionEnter2D(Collision2D col){
 		if(accumDistance > maxTravelDistance){
 			DestroyBullet();
+		}
+	}
+	void OnTriggerEnter2D(Collider2D col){
+		if(col.gameObject.layer == EnemyLayerIndex){
+			EnemyController enemy = col.attachedRigidbody.gameObject.GetComponent<EnemyController>();
+			enemy.DestroyEnemy();
 		}
 	}
 	IEnumerator LifetimeDelay(float lifetimeSeconds){

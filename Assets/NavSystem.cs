@@ -47,7 +47,7 @@ public class NavSystem : MonoBehaviour
 		List<Transform> navPointBuffer = new List<Transform>(NavPoints);
 		NavLayers = new List<List<Transform>>();
 
-		NavLayers.Add(SanitizePlayers(new List<Transform>(players)));// adding the players as the closest nav points
+		NavLayers.Add(new List<Transform>(players));// adding the players as the closest nav points
 
 		while (navPointBuffer.Count > 0){
 			List<Transform> newNavLayer = new List<Transform>();

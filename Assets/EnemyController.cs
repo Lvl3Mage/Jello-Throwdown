@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 	NavSystem navigation;
-	const int JumpTriggerLayer = 7, PlayerLayerIndex = 6;
+	const int JumpTriggerLayer = 7, PlayerLayerIndex = 6, BulletLayerIndex = 10;
 	int activeJumpTriggers = 0;
 	bool jumpDelayed = false;
 	[SerializeField] Rigidbody2D rb;
@@ -16,6 +16,8 @@ public class EnemyController : MonoBehaviour
 	[SerializeField] float jumpDelayTime;
 	[SerializeField] float airspeedFactor;
 	[SerializeField] float minJumpHeightDif;
+	[SerializeField] SpriteRenderer sr;
+	[SerializeField] GameObject DestructionEffect;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -26,6 +28,7 @@ public class EnemyController : MonoBehaviour
 	Vector2 target = Vector2.zero;
 	void Update()
 	{
+		sr.flipX = Mathf.Sign(rb.velocity.x) < 0;
 		float airAccelMultiplier = 1;
 		if(jumpDelayed){
 			airAccelMultiplier = airspeedFactor;
@@ -59,9 +62,12 @@ public class EnemyController : MonoBehaviour
 		
 	}
 	void OnCollisionEnter2D(Collision2D col){
-		if(col.collider.gameObject.layer != PlayerLayerIndex){
-			return;
+		if(col.collider.gameObject.layer == PlayerLayerIndex){
+			PlayerCollision(col);
 		}
+		
+	}
+	void PlayerCollision(Collision2D col){
 		if(col.collider.attachedRigidbody == null){
 			return;
 		}
@@ -70,6 +76,10 @@ public class EnemyController : MonoBehaviour
 			return;
 		}
 		player.DestroyPlayer();
+	}
+	public void DestroyEnemy(){
+		Destroy(gameObject);
+		// Instantiate(DestructionEffect, transform.position, Quaternion.identity);
 	}
 	public void AddJumpTrigger(){
 		activeJumpTriggers++;

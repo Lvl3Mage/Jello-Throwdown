@@ -506,9 +506,9 @@ MonoBehaviour:
   grabZone: {fileID: 8654914175591493993}
   grabPoint: {fileID: 8654914174590947344}
   maxDistance: 0.05
-  bulletVelocity: {x: 20, y: 3}
+  bulletVelocity: {x: 20, y: 0}
   rb: {fileID: 8654914176391198314}
-  PlayerBullet: {fileID: 5505656860067011458, guid: ea3bee0cd18c3c24aa79a8bcbaf9c1b9, type: 3}
+  PlayerBullet: {fileID: 6745623971336021418, guid: e2f61c3573e3e47499830b24261685fc, type: 3}
   throwKey: 115
   selfPlayer: {fileID: 8654914176391198318}
   SmallPlayerPrefab: {fileID: 6639725847739843160, guid: 274f56d3c73ce034b99a2875dc8d1955, type: 3}
@@ -568,7 +568,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -4496702377800771008, guid: 7c6ac66329afa684292872aa9ce000c8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.56199455, g: 1, b: 0.8570405, a: 0.78431374}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

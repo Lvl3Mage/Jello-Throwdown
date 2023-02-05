@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 926164285883793682, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: m_Color.b
+      value: 0.74332106
+      objectReference: {fileID: 0}
+    - target: {fileID: 926164285883793682, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: m_Color.g
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 926164285883793682, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8654914176391198315, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
       propertyPath: m_Name
       value: BigPlayerB Variant
@@ -75,6 +87,10 @@ PrefabInstance:
       propertyPath: throwKey
       value: 274
       objectReference: {fileID: 0}
+    - target: {fileID: 8654914176391198319, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: PlayerBullet
+      value: 
+      objectReference: {fileID: 5505656860067011458, guid: ea3bee0cd18c3c24aa79a8bcbaf9c1b9, type: 3}
     - target: {fileID: 8654914176391198319, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
       propertyPath: SmallPlayerPrefab
       value: 

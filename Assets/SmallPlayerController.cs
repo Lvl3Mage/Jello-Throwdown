@@ -8,6 +8,7 @@ public class SmallPlayerController : MonoBehaviour
 	[SerializeField] float struggleMagnitude = 0.5f;
 	[SerializeField] float struggleForce = 4f;
 	[SerializeField] PlayerController controller;
+	[SerializeField] Animator animator;
 	bool struggleState = false;
 	void Start()
 	{
@@ -41,5 +42,6 @@ public class SmallPlayerController : MonoBehaviour
 	public void EnableStruggleMode(){
 		controller.Disable();
 		struggleState = true;
+		animator.SetTrigger("grabbed");
 	}
 }
