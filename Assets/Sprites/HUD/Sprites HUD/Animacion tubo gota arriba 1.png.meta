@@ -1,37 +1,43 @@
 fileFormatVersion: 2
-guid: fb8a007923b64eb4a83fbef4f6f4ae7a
+guid: 000f966366466e647bd47a7573245b3a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3825481221709046500
-    second: Animacion tubo gota bajo 1_0
+      213: 2601876671775721543
+    second: Animacion tubo gota arriba 1_0
   - first:
-      213: 756484991454561907
-    second: Animacion tubo gota bajo 1_1
+      213: 6764595387168076877
+    second: Animacion tubo gota arriba 1_1
   - first:
-      213: 1924580621734216874
-    second: Animacion tubo gota bajo 1_2
+      213: -61875385591962369
+    second: Animacion tubo gota arriba 1_2
   - first:
-      213: 7942261515477156278
-    second: Animacion tubo gota bajo 1_3
+      213: 1058273234694545388
+    second: Animacion tubo gota arriba 1_3
   - first:
-      213: 1092626703580363556
-    second: Animacion tubo gota bajo 1_4
+      213: -7068224694685379028
+    second: Animacion tubo gota arriba 1_4
   - first:
-      213: -3409222044289574982
-    second: Animacion tubo gota bajo 1_5
+      213: 7659763077311135120
+    second: Animacion tubo gota arriba 1_5
   - first:
-      213: -5482781821532521138
-    second: Animacion tubo gota bajo 1_6
+      213: 1843511646458230342
+    second: Animacion tubo gota arriba 1_6
   - first:
-      213: 7345233717227306652
-    second: Animacion tubo gota bajo 1_7
+      213: 6207685711669302257
+    second: Animacion tubo gota arriba 1_7
   - first:
-      213: -7426377496985018104
-    second: Animacion tubo gota bajo 1_8
+      213: -5993893066077871325
+    second: Animacion tubo gota arriba 1_8
   - first:
-      213: -9026835984276431055
-    second: Animacion tubo gota bajo 1_9
+      213: 5591329774959627138
+    second: Animacion tubo gota arriba 1_9
+  - first:
+      213: 7438796238114512038
+    second: Animacion tubo gota arriba 1_10
+  - first:
+      213: -8584493116731106433
+    second: Animacion tubo gota arriba 1_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_0
+      name: Animacion tubo gota arriba 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1215
-        width: 340
-        height: 405
+        y: 162
+        width: 68
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,20 +141,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e225e227e6d61530800000000000000
-      internalID: 3825481221709046500
+      spriteID: 74841923c09bb1420800000000000000
+      internalID: 2601876671775721543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_1
+      name: Animacion tubo gota arriba 1_1
       rect:
         serializedVersion: 2
-        x: 340
-        y: 1215
-        width: 340
-        height: 405
+        x: 68
+        y: 162
+        width: 68
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 376409977139f7a00800000000000000
-      internalID: 756484991454561907
+      spriteID: d44366d0aaba0ed50800000000000000
+      internalID: 6764595387168076877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_2
+      name: Animacion tubo gota arriba 1_2
       rect:
         serializedVersion: 2
-        x: 680
-        y: 1215
-        width: 340
-        height: 405
+        x: 136
+        y: 162
+        width: 68
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +183,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa4811ce0eb75ba10800000000000000
-      internalID: 1924580621734216874
+      spriteID: ff463752aac242ff0800000000000000
+      internalID: -61875385591962369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_3
+      name: Animacion tubo gota arriba 1_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 810
-        width: 340
-        height: 405
+        x: 204
+        y: 162
+        width: 68
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,62 +204,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b18547b4c4983e60800000000000000
-      internalID: 7942261515477156278
+      spriteID: cef954566edbfae00800000000000000
+      internalID: 1058273234694545388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_4
-      rect:
-        serializedVersion: 2
-        x: 340
-        y: 810
-        width: 340
-        height: 405
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42b730ba23ac92f00800000000000000
-      internalID: 1092626703580363556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_5
-      rect:
-        serializedVersion: 2
-        x: 680
-        y: 810
-        width: 340
-        height: 405
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab750b11d9200b0d0800000000000000
-      internalID: -3409222044289574982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_6
+      name: Animacion tubo gota arriba 1_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 405
-        width: 340
-        height: 405
+        y: 81
+        width: 68
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4db59a7bfe39e3b0800000000000000
-      internalID: -5482781821532521138
+      spriteID: c2652a8d61f98ed90800000000000000
+      internalID: -7068224694685379028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_7
+      name: Animacion tubo gota arriba 1_5
       rect:
         serializedVersion: 2
-        x: 340
-        y: 405
-        width: 340
-        height: 405
+        x: 68
+        y: 81
+        width: 68
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9e3e8b26238fe560800000000000000
-      internalID: 7345233717227306652
+      spriteID: 09d78c68fe1fc4a60800000000000000
+      internalID: 7659763077311135120
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_8
+      name: Animacion tubo gota arriba 1_6
       rect:
         serializedVersion: 2
-        x: 680
-        y: 405
-        width: 340
-        height: 405
+        x: 136
+        y: 81
+        width: 68
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,20 +267,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 801e04c530530f890800000000000000
-      internalID: -7426377496985018104
+      spriteID: 646307a3318759910800000000000000
+      internalID: 1843511646458230342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animacion tubo gota bajo 1_9
+      name: Animacion tubo gota arriba 1_7
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 81
+        width: 68
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f31159d341262650800000000000000
+      internalID: 6207685711669302257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animacion tubo gota arriba 1_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 340
-        height: 405
+        width: 68
+        height: 81
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,8 +309,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13f5d7f9f7c3ab280800000000000000
-      internalID: -9026835984276431055
+      spriteID: 32360ce630a61dca0800000000000000
+      internalID: -5993893066077871325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animacion tubo gota arriba 1_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 68
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b88826ec4689d40800000000000000
+      internalID: 5591329774959627138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animacion tubo gota arriba 1_10
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 68
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6acd35124c9eb3760800000000000000
+      internalID: 7438796238114512038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animacion tubo gota arriba 1_11
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 0
+        width: 68
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bd4703ef0cdd880800000000000000
+      internalID: -8584493116731106433
       vertices: []
       indices: 
       edges: []
