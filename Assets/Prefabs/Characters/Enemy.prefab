@@ -53,7 +53,7 @@ MonoBehaviour:
   jumpStrength: 11
   leapStrength: 1.5
   jumpDelayTime: 1.5
-  airspeedFactor: 0.05
+  airspeedFactor: 0.1
   minJumpHeightDif: 1
   sr: {fileID: 6073478872817074112}
   DestructionEffect: {fileID: 9112374266373364008, guid: e5669fa1059c35b40b4af2f491a782b5, type: 3}
