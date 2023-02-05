@@ -14,7 +14,7 @@ public class PlayerManager : MonoBehaviour
 	[SerializeField] Animator gameOverMenu;
 	[SerializeField] RespawnHUDManager respawnHUDManager;
 	[SerializeField] float slowMotionSpeed, slowMotionLerpTime;
-
+	bool playerSpawnInProgress;
 	List<Player> players = new List<Player>();
 	void Awake()
 	{
@@ -50,7 +50,7 @@ public class PlayerManager : MonoBehaviour
 		return players.ToArray();
 	}
 	void UpdatePlayers(){
-		if(players.Count == 0){
+		if(players.Count == 0 && !playerSpawnInProgress){
 			GameOver();
 		}
 		if(OnPlayersChanged != null){
@@ -66,9 +66,14 @@ public class PlayerManager : MonoBehaviour
 		yield return new WaitForSeconds(respawnTime);
 		if(players.Count != 0){
 			spawnPoint.SpawnPlayer(GetPlayerPrefab(team));
+			playerSpawnInProgress = true;
+			spawnPoint.onPlayerSpawned += PlayerSpawned;
 			// Instantiate(GetPlayerPrefab(team), spawnPoint.position, Quaternion.identity);
 		}
 		
+	}
+	void PlayerSpawned(){//callback from spawnpoint
+		playerSpawnInProgress = false;
 	}
 	GameObject GetPlayerPrefab(PlayerTeam team){
 		switch(team){

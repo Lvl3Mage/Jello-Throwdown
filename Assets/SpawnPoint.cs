@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
+	public delegate void PlayerSpawnHandler();
+	public event PlayerSpawnHandler onPlayerSpawned;
 	[SerializeField] Animator animator;
 	void Start()
 	{
@@ -26,5 +28,9 @@ public class SpawnPoint : MonoBehaviour
 	void ShootPlayer(){
 		Destroy(curTargeter);
 		Instantiate(playerToSpawn, transform.position, Quaternion.identity);
+		if(onPlayerSpawned != null){
+			onPlayerSpawned.Invoke();
+			onPlayerSpawned = null;
+		}
 	}
 }
