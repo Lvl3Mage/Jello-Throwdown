@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
 	NavSystem navigation;
-	const int JumpTriggerLayer = 7;
+	const int JumpTriggerLayer = 7, PlayerLayerIndex = 6;
 	int activeJumpTriggers = 0;
 	bool jumpDelayed = false;
 	[SerializeField] Rigidbody2D rb;
@@ -57,6 +57,19 @@ public class EnemyController : MonoBehaviour
 
 		}
 		
+	}
+	void OnCollisionEnter2D(Collision2D col){
+		if(col.collider.gameObject.layer != PlayerLayerIndex){
+			return;
+		}
+		if(col.collider.attachedRigidbody == null){
+			return;
+		}
+		Player player = col.collider.attachedRigidbody.gameObject.GetComponent<Player>();
+		if(player == null){
+			return;
+		}
+		player.DestroyPlayer();
 	}
 	public void AddJumpTrigger(){
 		activeJumpTriggers++;

@@ -21,10 +21,10 @@ public class CameraController : MonoBehaviour
 	void Start()
 	{
 		// cameraConfig.trackedObjects = new Transform[]{};
-		PlayersUpdated(PlayerManager.instance.GetPlayers());
-		PlayerManager.instance.OnPlayersChanged += PlayersUpdated;
+		UpdatePlayers(PlayerManager.instance.GetPlayers());
+		PlayerManager.instance.OnPlayersChanged += UpdatePlayers;
 	}
-	void PlayersUpdated(Player[] players){
+	void UpdatePlayers(Player[] players){
 		cameraConfig.trackedObjects = new Transform[players.Length];
 		for(int i = 0; i < players.Length; i++){
 			cameraConfig.trackedObjects[i] = players[i].gameObject.transform;
