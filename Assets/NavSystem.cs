@@ -36,7 +36,7 @@ public class NavSystem : MonoBehaviour
 	}
 	List<Transform> SanitizePlayers(List<Transform> sanPlayers){ // this is theoretically unnecesarry, however sometimes a null transform can appear so this stays here for now
 		for(int i = 0; i < sanPlayers.Count; i++){
-			if(!sanPlayers[i]){
+			if(sanPlayers[i] == null){
 				sanPlayers.RemoveAt(i);
 			}
 		}

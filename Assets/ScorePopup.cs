@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScorePopup : MonoBehaviour
 {
+	[SerializeField] TextAutowritter text;
 	void Start()
 	{
 		
@@ -12,5 +13,11 @@ public class ScorePopup : MonoBehaviour
 	void Update()
 	{
 		
+	}
+	public void AnimationOver(){
+		Destroy(this);
+	}
+	public void SetScore(float score){
+		text.SetString(score.ToString());
 	}
 }

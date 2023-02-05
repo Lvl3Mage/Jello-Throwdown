@@ -7,6 +7,8 @@ public class PlayerManager : MonoBehaviour
 	public static PlayerManager instance;
 	
 	public delegate void PlayerChangeHandler(Player[] player);
+	public delegate void GameOverHandler();
+	public event GameOverHandler OnGameOver;
 	public event PlayerChangeHandler OnPlayersChanged;
 	[SerializeField] SpawnPoint spawnPoint;
 	[SerializeField] GameObject TeamACharacter;
@@ -60,6 +62,9 @@ public class PlayerManager : MonoBehaviour
 	void GameOver(){
 		gameOverMenu.SetTrigger("enable");
 		SlowMotion.LerpSlowDown(slowMotionSpeed, slowMotionLerpTime, this);
+		if(OnGameOver != null){
+			OnGameOver.Invoke();
+		}
 	}
 	IEnumerator RespawnPlayer(float respawnTime, PlayerTeam team){
 		respawnHUDManager.AddRespawn(team, respawnTime);

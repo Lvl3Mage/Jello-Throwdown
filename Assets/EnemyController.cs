@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
 	[SerializeField] float minJumpHeightDif;
 	[SerializeField] SpriteRenderer sr;
 	[SerializeField] GameObject DestructionEffect;
+	[SerializeField] ScorePopup scorePopupPrefab;
+	[SerializeField] float scoreRotationVariation;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -77,9 +79,11 @@ public class EnemyController : MonoBehaviour
 		}
 		player.DestroyPlayer();
 	}
-	public void DestroyEnemy(){
+	public void DestroyEnemy(float score){
 		Destroy(gameObject);
 		Instantiate(DestructionEffect, transform.position, Quaternion.identity);
+		ScoreUtility.instance.AddScore(score);
+		Instantiate(scorePopupPrefab, transform.position, Quaternion.Euler(0,0,Random.Range(-scoreRotationVariation,scoreRotationVariation))).SetScore(score);
 	}
 	public void AddJumpTrigger(){
 		activeJumpTriggers++;
