@@ -15366,6 +15366,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawning Pipe
       objectReference: {fileID: 0}
+    - target: {fileID: 6804656312193233861, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6516813927908671967, guid: c5ba5e1ab8d7d6849b165f3a595220f2, type: 3}
+    - target: {fileID: 6804656314281284808, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.784
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804656314281284808, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804656314281284809, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 9197895664274405391, guid: c38c421f8d470c24eaf93c5f8431cf47, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
 --- !u!1001 &231896329
