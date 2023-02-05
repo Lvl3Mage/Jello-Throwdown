@@ -5,6 +5,8 @@ using UnityEngine;
 public class BulletController : MonoBehaviour // spaghetti xd
 {
 	const float respawnTime = 1f;
+	float accumScore;
+	[SerializeField] float scorePerEnemy = 100;
 	[SerializeField] float minTravelDistance = 5;
 	[SerializeField] float maxLifetime = 1;
 	[SerializeField] GameObject DestructionEffect;
@@ -18,6 +20,7 @@ public class BulletController : MonoBehaviour // spaghetti xd
 	void Awake(){
 		pastPos = transform.position;
 		lifetimeRoutine = StartCoroutine(LifetimeDelay(maxLifetime));
+		accumScore = scorePerEnemy;
 	}
 	public void SetTeam(PlayerTeam _team){
 		team = _team;
@@ -36,7 +39,8 @@ public class BulletController : MonoBehaviour // spaghetti xd
 	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.layer == EnemyLayerIndex){
 			EnemyController enemy = col.attachedRigidbody.gameObject.GetComponent<EnemyController>();
-			enemy.DestroyEnemy();
+			enemy.DestroyEnemy(accumScore);
+			accumScore += scorePerEnemy;
 		}
 	}
 	IEnumerator LifetimeDelay(float lifetimeSeconds){

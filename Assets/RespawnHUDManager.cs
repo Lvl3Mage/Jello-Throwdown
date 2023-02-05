@@ -7,12 +7,15 @@ public class RespawnHUDManager : MonoBehaviour
 	[SerializeField] RespawnHUD respawnA, respawnB;
 	void Start()
 	{
-		
+		PlayerManager.instance.OnGameOver += OnGameOver;
 	}
 
 	void Update()
 	{
 		
+	}
+	void OnGameOver(){
+		gameObject.SetActive(false);
 	}
 	public void AddRespawn(PlayerTeam team, float respawnTime){
 		RespawnHUD respawnPrefab;

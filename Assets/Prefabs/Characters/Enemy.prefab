@@ -58,6 +58,8 @@ MonoBehaviour:
   minJumpHeightDif: 1
   sr: {fileID: 6073478872817074112}
   DestructionEffect: {fileID: 9112374266373364008, guid: e5669fa1059c35b40b4af2f491a782b5, type: 3}
+  scorePopupPrefab: {fileID: 3871885507682013345, guid: b04a6634d5279344ab0968e613c4dcef, type: 3}
+  scoreRotationVariation: 5
 --- !u!50 &6073478872817074126
 Rigidbody2D:
   serializedVersion: 4
