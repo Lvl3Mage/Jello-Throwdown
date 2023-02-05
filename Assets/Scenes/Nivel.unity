@@ -15252,6 +15252,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6974794293547937487, guid: 7b3096aea47ede04c9dfe9321e3b6ccd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b3096aea47ede04c9dfe9321e3b6ccd, type: 3}
 --- !u!1001 &194890160
@@ -15263,15 +15267,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6804656312193233858, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6804656312193233858, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.31
+      value: -9.29
       objectReference: {fileID: 0}
     - target: {fileID: 6804656312193233858, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.57
+      value: 10.533
       objectReference: {fileID: 0}
     - target: {fileID: 6804656312193233858, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16818,7 +16822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2408919252146670308, guid: ad7b63ce443456449986b04df29f86fd, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2408919252146670308, guid: ad7b63ce443456449986b04df29f86fd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17768,6 +17772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3102876923315892850, guid: 6f5c0cde33a191d4fb43bf7cdc5f2930, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f5c0cde33a191d4fb43bf7cdc5f2930, type: 3}
 --- !u!4 &1734540534 stripped
@@ -18704,7 +18712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2755270395731908416, guid: 09f245e9dbe6c2a45bc2e2f6ed05c796, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2755270395731908416, guid: 09f245e9dbe6c2a45bc2e2f6ed05c796, type: 3}
       propertyPath: m_LocalPosition.x
