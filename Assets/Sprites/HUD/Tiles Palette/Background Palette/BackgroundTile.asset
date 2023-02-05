@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: BackgroundTile
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: ad71c115c33153b419f80d4f47270689, type: 3}
-  m_Color: {r: 0.40197325, g: 0.6037736, b: 0.4960983, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 213be00fdfb6cce43885ac802f18b53e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
     e01: 0
