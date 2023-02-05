@@ -275,7 +275,7 @@ MonoBehaviour:
   moveSpeed: 8
   groundAcceleration: 3
   airAcceleration: 1
-  jumpSpeed: 12
+  jumpSpeed: 15
   jumpDelayTime: 0.2
   maxAirJumps: 1
   rb: {fileID: 6639725847739843163}
