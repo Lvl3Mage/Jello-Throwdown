@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BackgroundTile
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 213be00fdfb6cce43885ac802f18b53e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5647918, g: 0.7169812, b: 0.6413344, a: 1}
   m_Transform:
     e00: 1
     e01: 0
