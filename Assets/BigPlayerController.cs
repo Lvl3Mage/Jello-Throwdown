@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerGrabController : MonoBehaviour
+public class BigPlayerController : MonoBehaviour
 {
 	[SerializeField] TriggerCol grabZone;
 	[SerializeField] Transform grabPoint;
@@ -22,10 +22,13 @@ public class PlayerGrabController : MonoBehaviour
 	void UpdatePlayers(Player[] players){
 		if(players.Length == 1 && players[0] == selfPlayer){
 			//await animation
-			Instantiate(SmallPlayerPrefab, transform.position, Quaternion.identity);
-			selfPlayer.Despawn();
-			Destroy(gameObject);
+			ReplacePlayer();
 		}
+	}
+	void ReplacePlayer(){
+		Instantiate(SmallPlayerPrefab, transform.position, Quaternion.identity);
+		selfPlayer.Despawn();
+		Destroy(gameObject);
 	}
 	void LateUpdate()
 	{
@@ -62,7 +65,7 @@ public class PlayerGrabController : MonoBehaviour
 		// grabbedPlayer.position = Vector2.Lerp(grabbedPlayer.position, grabPoint.position, Time.deltaTime*lerpSpeed);
 	}
 	void GrabPlayer(GameObject player){
-		StruggleController controller = player.GetComponent<StruggleController>();
+		SmallPlayerController controller = player.GetComponent<SmallPlayerController>();
 		controller.EnableStruggleMode();
 		grabbedPlayer = player.GetComponent<Player>();
 	}

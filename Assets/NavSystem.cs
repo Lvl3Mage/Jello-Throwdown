@@ -32,24 +32,22 @@ public class NavSystem : MonoBehaviour
 	{
 		Color colorA = new Color(1, 0, 0),colorB = new Color(0, 1, 0);
 		ComputeNavPoints();
-		// for (int i = 1; i < NavLayers.Count; i++){
-		// 	List<Transform> prevLayer = NavLayers[i-1];
-		// 	List<Transform> curLayer = NavLayers[i];
-		// 	Color layerColor = Color.Lerp(colorB, colorA, i/(float)NavLayers.Count);
-		// 	foreach(Transform curPoint in curLayer){
-		// 		foreach(Transform targetPoint in prevLayer){
-		// 			if(isInView(curPoint.position, targetPoint.position)){
-		// 				Debug.DrawLine(curPoint.position, targetPoint.position,layerColor);
-		// 			}
-		// 		}
-		// 	}
-		// }
+
+	}
+	List<Transform> SanitizePlayers(List<Transform> sanPlayers){ // this is theoretically unnecesarry, however sometimes a null transform can appear so this stays here for now
+		for(int i = 0; i < sanPlayers.Count; i++){
+			if(!sanPlayers[i]){
+				sanPlayers.RemoveAt(i);
+			}
+		}
+		return sanPlayers;
 	}
 	List<List<Transform>> NavLayers = new List<List<Transform>>{};
 	void ComputeNavPoints(){
 		List<Transform> navPointBuffer = new List<Transform>(NavPoints);
 		NavLayers = new List<List<Transform>>();
-		NavLayers.Add(new List<Transform>(players));// adding the players as the closest nav points
+
+		NavLayers.Add(SanitizePlayers(new List<Transform>(players)));// adding the players as the closest nav points
 
 		while (navPointBuffer.Count > 0){
 			List<Transform> newNavLayer = new List<Transform>();

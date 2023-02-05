@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StruggleController : MonoBehaviour
+public class SmallPlayerController : MonoBehaviour
 {
 	[SerializeField] KeyCode up, down, left, right;
 	[SerializeField] float struggleMagnitude = 0.5f;
