@@ -1,22 +1,13 @@
 fileFormatVersion: 2
-guid: 843f8d6d5f4be684797eb13889422534
+guid: 0a48be6b87063ee4b836e296d239fb24
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 933818369308547214
-    second: Ordenador 1_0
+      213: 8099467831676286266
+    second: Ordenador (1)_0
   - first:
-      213: 687867592697585731
-    second: Ordenador 1_1
-  - first:
-      213: 6834071098782155513
-    second: Ordenador 1_2
-  - first:
-      213: -3915625723533073779
-    second: Ordenador 1_3
-  - first:
-      213: -966288192262184488
-    second: Ordenador 1_4
+      213: 8024822189278208325
+    second: Ordenador (1)_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,70 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ordenador 1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 77
-        width: 50
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e88de5bfbd695fc00800000000000000
-      internalID: 933818369308547214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ordenador 1_1
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 77
-        width: 50
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3402e3b5eebcb8900800000000000000
-      internalID: 687867592697585731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ordenador 1_2
-      rect:
-        serializedVersion: 2
-        x: 100
-        y: 77
-        width: 50
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f28ca4b47f77de50800000000000000
-      internalID: 6834071098782155513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ordenador 1_3
+      name: Ordenador (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -183,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d82ed6b7627e8a9c0800000000000000
-      internalID: -3915625723533073779
+      spriteID: a35b4c08417176070800000000000000
+      internalID: 8099467831676286266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ordenador 1_4
+      name: Ordenador (1)_1
       rect:
         serializedVersion: 2
         x: 50
@@ -204,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d1ee8d320e0792f0800000000000000
-      internalID: -966288192262184488
+      spriteID: 541a9998345ed5f60800000000000000
+      internalID: 8024822189278208325
       vertices: []
       indices: 
       edges: []
