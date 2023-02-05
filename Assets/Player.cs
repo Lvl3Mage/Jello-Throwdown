@@ -16,10 +16,22 @@ public class Player : MonoBehaviour
 			return playerTeam;
 		}
 	}
-	void Start()
+	bool initialized = false;
+	void Awake()
 	{
-		PlayerManager.instance.AddPlayer(this);
+		if(PlayerManager.instance){
+			PlayerManager.instance.AddPlayer(this);
+			initialized = true;
+		}
+		
 	}
+	void Start(){
+		if(!initialized){
+			PlayerManager.instance.AddPlayer(this);
+			initialized = true;
+		}
+	}
+
 	void Update(){
 		
 	}

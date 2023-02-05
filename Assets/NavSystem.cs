@@ -74,7 +74,7 @@ public class NavSystem : MonoBehaviour
 				// clusterUnreachable = clusterUnreachable && !reachable; // unreachable cluster endcheck
 			}
 			if(clusterUnreachable){
-				Debug.LogError("Unreachable nav point cluster!");
+				// Debug.LogError("Unreachable nav point cluster!");
 				break;
 			}
 			NavLayers.Add(newNavLayer);
@@ -125,7 +125,7 @@ public class NavSystem : MonoBehaviour
 				}
 			}
 			if(!closestLayerPoint){
-				Debug.LogError("Cannot form path! Point inaccesible.");
+				// Debug.LogError("Cannot form path! Point inaccesible.");
 				return Mathf.Infinity;
 			}
 			searchPoint = closestLayerPoint.position;
