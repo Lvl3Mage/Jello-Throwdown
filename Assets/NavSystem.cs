@@ -86,6 +86,7 @@ public class NavSystem : MonoBehaviour
 		float closestDistance = Mathf.Infinity;
 		for(int i = 0; i < NavLayers.Count; i++){
 			List<Transform> navLayer = NavLayers[i];
+			navLayer = SanitizePlayers(navLayer);
 			foreach(Transform navPoint in navLayer){
 				if(isInView(startPoint, navPoint.position)){
 					// Debug.DrawLine(startPoint, navPoint.position, Color.red);
