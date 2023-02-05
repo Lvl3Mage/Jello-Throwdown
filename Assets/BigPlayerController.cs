@@ -35,6 +35,7 @@ public class BigPlayerController : MonoBehaviour
 	}
 	void ReplacePlayer(){
 		Instantiate(SmallPlayerPrefab, transform.position, Quaternion.identity);
+		Debug.Log(PlayerManager.instance.GetPlayers().Length);
 		selfPlayer.Despawn();
 		Destroy(gameObject);
 	}

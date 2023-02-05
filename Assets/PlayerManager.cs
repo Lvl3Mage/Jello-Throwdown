@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
 	[SerializeField] Transform spawnPoint;
 	[SerializeField] GameObject TeamACharacter;
 	[SerializeField] GameObject TeamBCharacter;
+	[SerializeField] Animator gameOverMenu;
+	[SerializeField] float slowMotionSpeed, slowMotionLerpTime;
 
 	List<Player> players = new List<Player>();
 	void Awake()
@@ -47,13 +49,23 @@ public class PlayerManager : MonoBehaviour
 		return players.ToArray();
 	}
 	void UpdatePlayers(){
+		if(players.Count == 0){
+			GameOver();
+		}
 		if(OnPlayersChanged != null){
 			OnPlayersChanged.Invoke(players.ToArray());
 		}
 	}
+	void GameOver(){
+		gameOverMenu.SetTrigger("enable");
+		SlowMotion.LerpSlowDown(slowMotionSpeed, slowMotionLerpTime, this);
+	}
 	IEnumerator RespawnPlayer(float respawnTime, PlayerTeam team){
 		yield return new WaitForSeconds(respawnTime);
-		Instantiate(GetPlayerPrefab(team), spawnPoint.position, Quaternion.identity);
+		if(players.Count != 0){
+			Instantiate(GetPlayerPrefab(team), spawnPoint.position, Quaternion.identity);
+		}
+		
 	}
 	GameObject GetPlayerPrefab(PlayerTeam team){
 		switch(team){
