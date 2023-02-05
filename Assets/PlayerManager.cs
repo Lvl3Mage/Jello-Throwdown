@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
 	
 	public delegate void PlayerChangeHandler(Player[] player);
 	public event PlayerChangeHandler OnPlayersChanged;
-	[SerializeField] Transform spawnPoint;
+	[SerializeField] SpawnPoint spawnPoint;
 	[SerializeField] GameObject TeamACharacter;
 	[SerializeField] GameObject TeamBCharacter;
 	[SerializeField] Animator gameOverMenu;
@@ -65,7 +65,8 @@ public class PlayerManager : MonoBehaviour
 		respawnHUDManager.AddRespawn(team, respawnTime);
 		yield return new WaitForSeconds(respawnTime);
 		if(players.Count != 0){
-			Instantiate(GetPlayerPrefab(team), spawnPoint.position, Quaternion.identity);
+			spawnPoint.SpawnPlayer(GetPlayerPrefab(team));
+			// Instantiate(GetPlayerPrefab(team), spawnPoint.position, Quaternion.identity);
 		}
 		
 	}

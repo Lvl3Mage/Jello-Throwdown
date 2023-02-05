@@ -15587,11 +15587,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 793724456504690601, guid: 4c57f09e657246b4a94abcd679ae471d, type: 3}
   m_PrefabInstance: {fileID: 5152737159425470702}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &598249359 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3265625579141179882, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
-  m_PrefabInstance: {fileID: 194890160}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &662934577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17064,6 +17059,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8548322114617152986, guid: 09a2a2903312df743a22b7f8c536deb8, type: 3}
   m_PrefabInstance: {fileID: 1463574955}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1186191990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6804656312193233860, guid: ca2422e256cd3a84894159c84fe67742, type: 3}
+  m_PrefabInstance: {fileID: 194890160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1186191993
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186191990}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af3cb5fa92c5c8640a366050554dec1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1186191994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186191990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048e98323a810a443ace989396f3ac5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1186191993}
+  cameraTargeter: {fileID: 1846593578126845295, guid: 1c8ed121a6b675d4e9d86cf0861203cb, type: 3}
 --- !u!4 &1280286690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2199706579458467155, guid: 964d1293e0be7744aa8d14ae1378de2b, type: 3}
@@ -17984,7 +18017,7 @@ PrefabInstance:
     - target: {fileID: 136404863933753358, guid: 60dbb10e31628294881e095b6489ea0e, type: 3}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 598249359}
+      objectReference: {fileID: 1186191994}
     - target: {fileID: 136404863933753358, guid: 60dbb10e31628294881e095b6489ea0e, type: 3}
       propertyPath: gameOverMenu
       value: 

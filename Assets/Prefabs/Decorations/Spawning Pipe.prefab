@@ -40,6 +40,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6804656312193233858}
   - component: {fileID: 6804656312193233861}
+  - component: {fileID: 6185971510814003134}
+  - component: {fileID: 3416441784298085554}
   m_Layer: 0
   m_Name: Spawning Pipe
   m_TagString: Untagged
@@ -114,6 +116,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6185971510814003134
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6804656312193233860}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af3cb5fa92c5c8640a366050554dec1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3416441784298085554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6804656312193233860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 048e98323a810a443ace989396f3ac5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6185971510814003134}
+  cameraTargeter: {fileID: 1846593578126845295, guid: 1c8ed121a6b675d4e9d86cf0861203cb, type: 3}
 --- !u!1 &6804656314281284811
 GameObject:
   m_ObjectHideFlags: 0

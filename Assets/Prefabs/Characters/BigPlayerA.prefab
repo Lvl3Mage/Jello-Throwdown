@@ -513,7 +513,7 @@ MonoBehaviour:
   selfPlayer: {fileID: 8654914176391198318}
   SmallPlayerPrefab: {fileID: 6639725847739843160, guid: 274f56d3c73ce034b99a2875dc8d1955, type: 3}
   animator: {fileID: 4945283591028561170}
-  xSpawnVelRange: {x: 5, y: 50}
+  xSpawnVelRange: {x: 15, y: 75}
   ySpawnVelRange: {x: -1, y: 1}
 --- !u!114 &8654914176391198318
 MonoBehaviour:
