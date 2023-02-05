@@ -8,6 +8,8 @@ public class BulletController : MonoBehaviour // spaghetti xd
 	[SerializeField] float maxTravelDistance;
 	[SerializeField] float maxLifetime = 1;
 	[SerializeField] GameObject DestructionEffect;
+	[SerializeField] Rigidbody2D rb;
+
 	Vector2 pastPos;
 	float accumDistance = 0;
 	Coroutine lifetimeRoutine;
@@ -23,6 +25,8 @@ public class BulletController : MonoBehaviour // spaghetti xd
 	void Update(){
 		accumDistance += (pastPos - (Vector2)transform.position).magnitude;
 		pastPos = transform.position;
+
+		transform.rotation = Quaternion.Euler(0,0,Mathf.Atan2(rb.velocity.y, rb.velocity.x)*Mathf.Rad2Deg);
 	}
 	void OnCollisionEnter2D(Collision2D col){
 		if(accumDistance > maxTravelDistance){

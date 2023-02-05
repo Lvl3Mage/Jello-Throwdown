@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] float jumpDelayTime;
 	[SerializeField] int maxAirJumps;
 	[SerializeField] Rigidbody2D rb;
-
+	[SerializeField] SpriteRenderer sr;
+	[SerializeField] Animator animator;
 	
 
 	int airJumpCount = 0;
@@ -38,6 +39,9 @@ public class PlayerController : MonoBehaviour
 
 	void Update()
 	{
+		sr.flipX = Mathf.Sign(rb.velocity.x) < 0;
+		animator.SetFloat("velXAbs", Mathf.Abs(rb.velocity.x));
+		animator.SetBool("inAir", !canJump());
 		float acceleration = groundAcceleration;
 		if(!groundedCol.colliding){
 			acceleration = airAcceleration;

@@ -13,16 +13,24 @@ public class BigPlayerController : MonoBehaviour
 	[SerializeField] KeyCode throwKey;
 	[SerializeField] Player selfPlayer;
 	[SerializeField] GameObject SmallPlayerPrefab;
+	[SerializeField] Animator animator;
 	const int playerLayerIndex = 6;
 	Player grabbedPlayer;
 	void Start()
 	{
+		selfPlayer.OnDestruction += PlayerDestroyed;
 		PlayerManager.instance.OnPlayersChanged += UpdatePlayers;
+	}
+	void PlayerDestroyed(){
+		if(grabbedPlayer){
+			grabbedPlayer.DestroyPlayer();
+		}
 	}
 	void UpdatePlayers(Player[] players){
 		if(players.Length == 1 && players[0] == selfPlayer){
 			//await animation
-			ReplacePlayer();
+			animator.SetTrigger("transform");
+			// ReplacePlayer();
 		}
 	}
 	void ReplacePlayer(){
@@ -68,10 +76,12 @@ public class BigPlayerController : MonoBehaviour
 		SmallPlayerController controller = player.GetComponent<SmallPlayerController>();
 		controller.EnableStruggleMode();
 		grabbedPlayer = player.GetComponent<Player>();
+		animator.SetTrigger("grab");
 	}
 	void StartThrow(){
 		//Handle animator
-		ThrowPlayer(); // remove call when animating
+		animator.SetTrigger("throw");
+		// ThrowPlayer(); // remove call when animating
 	}
 	void ThrowPlayer(){
 

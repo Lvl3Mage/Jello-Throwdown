@@ -483,8 +483,8 @@ MonoBehaviour:
   camera: {fileID: 519420031}
   cameraConfig:
     trackedObjects: []
-    baseZoom: 5
-    velocityZoom: 2
+    baseZoom: 4
+    velocityZoom: 0.4
     lerpSpeed: 10
     zoomLerpSpeed: 8
 --- !u!20 &519420031
@@ -497,7 +497,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0}
+  m_BackGroundColor: {r: 0.09737831, g: 0.13454388, b: 0.21698111, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1019,18 +1019,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9123485535863518825, guid: 5818b1f2d02628949b5d3c1bcfd344ce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9123485535863518825, guid: 5818b1f2d02628949b5d3c1bcfd344ce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9123485535863518825, guid: 5818b1f2d02628949b5d3c1bcfd344ce, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5818b1f2d02628949b5d3c1bcfd344ce, type: 3}
 --- !u!1 &1397324253
@@ -1121,7 +1109,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!70 &1418719971
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1565,6 +1553,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 926164285883793682, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 926164285883793682, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 926164285883793682, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8654914176391198315, guid: 4911272fd48da9246b1118b3fb5759ca, type: 3}
       propertyPath: m_Name
       value: BigPlayerA
