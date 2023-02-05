@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
 			if(canJump() || airJumpCount < maxAirJumps){
 				StartCoroutine(JumpDelay(jumpDelayTime));
 				rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+				airJumpCount++;
 			}
 			// else if(airJumpCount < maxAirJumps){
 			// 	StartCoroutine(JumpDelay(jumpDelayTime));
