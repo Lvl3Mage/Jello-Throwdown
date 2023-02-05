@@ -281,6 +281,7 @@ MonoBehaviour:
   rb: {fileID: 6639725847739843163}
   sr: {fileID: 8032001131943370126}
   animator: {fileID: 4774484807885235459}
+  JumpEffect: {fileID: 2707932885198270638, guid: dd04ec492ca6f0c4888971224db7505d, type: 3}
 --- !u!50 &6639725847739843163
 Rigidbody2D:
   serializedVersion: 4
@@ -336,6 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeam: 0
   DestructionEffect: {fileID: 5088170297738546656, guid: 9cdd37de31855994c80ae4b7286a7db9, type: 3}
+  invulnerable: 0
 --- !u!95 &4774484807885235459
 Animator:
   serializedVersion: 3

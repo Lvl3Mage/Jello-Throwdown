@@ -102,6 +102,8 @@ public class BigPlayerController : MonoBehaviour
 		bullet.SetTeam(grabbedPlayer.team);
 		grabbedPlayer.Despawn();
 		Destroy(grabbedPlayer.gameObject);
+
+		CameraShake.instance.Shake(50,100);
 	}
 	void OnCollisionEnter2D(Collision2D col){
 		if(!collided){
@@ -115,5 +117,6 @@ public class BigPlayerController : MonoBehaviour
 		foreach(Collider2D col in cols){
 			col.attachedRigidbody.gameObject.GetComponent<EnemyController>().DestroyEnemy(100);
 		}
+		CameraShake.instance.Shake(50,100);
 	}
 }

@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 	
 	public delegate void DestructionHandler();
 	public event DestructionHandler OnDestruction;
-	const float reviveTime = 5f;
+	const float reviveTime = 4f;
 	[HideInInspector] public bool invulnerable = false;
 	public PlayerTeam team
 	{

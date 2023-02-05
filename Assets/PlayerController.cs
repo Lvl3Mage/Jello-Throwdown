@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] Rigidbody2D rb;
 	[SerializeField] SpriteRenderer sr;
 	[SerializeField] Animator animator;
+	[SerializeField] GameObject JumpEffect;
 	
 
 	int airJumpCount = 0;
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
 			if(canJump() || airJumpCount < maxAirJumps){
 				StartCoroutine(JumpDelay(jumpDelayTime));
 				rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
+				Instantiate(JumpEffect, transform.position, Quaternion.identity);
 				airJumpCount++;
 			}
 			// else if(airJumpCount < maxAirJumps){

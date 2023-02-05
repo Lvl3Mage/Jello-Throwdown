@@ -471,6 +471,7 @@ MonoBehaviour:
   rb: {fileID: 8654914176391198314}
   sr: {fileID: 926164285883793682}
   animator: {fileID: 4945283591028561170}
+  JumpEffect: {fileID: 2707932885198270638, guid: dd04ec492ca6f0c4888971224db7505d, type: 3}
 --- !u!50 &8654914176391198314
 Rigidbody2D:
   serializedVersion: 4
