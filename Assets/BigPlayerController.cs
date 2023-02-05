@@ -34,8 +34,8 @@ public class BigPlayerController : MonoBehaviour
 		}
 	}
 	void ReplacePlayer(){
-		Instantiate(SmallPlayerPrefab, transform.position, Quaternion.identity);
-		Debug.Log(PlayerManager.instance.GetPlayers().Length);
+		Instantiate(SmallPlayerPrefab, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>().velocity = rb.velocity;
+		// Debug.Log(PlayerManager.instance.GetPlayers().Length);
 		selfPlayer.Despawn();
 		Destroy(gameObject);
 	}
