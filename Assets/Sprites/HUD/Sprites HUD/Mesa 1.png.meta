@@ -113,7 +113,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
+        y: 0
         width: 80
         height: 80
       alignment: 0
@@ -134,7 +134,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 160
+        y: 0
         width: 80
         height: 80
       alignment: 0
@@ -154,8 +154,8 @@ TextureImporter:
       name: Mesa 1_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 80
+        x: 160
+        y: 0
         width: 80
         height: 80
       alignment: 0
@@ -175,8 +175,8 @@ TextureImporter:
       name: Mesa 1_3
       rect:
         serializedVersion: 2
-        x: 80
-        y: 80
+        x: 240
+        y: 0
         width: 80
         height: 80
       alignment: 0
@@ -196,7 +196,7 @@ TextureImporter:
       name: Mesa 1_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 320
         y: 0
         width: 80
         height: 80
@@ -217,7 +217,7 @@ TextureImporter:
       name: Mesa 1_5
       rect:
         serializedVersion: 2
-        x: 80
+        x: 400
         y: 0
         width: 80
         height: 80
