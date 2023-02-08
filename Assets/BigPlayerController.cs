@@ -24,9 +24,13 @@ public class BigPlayerController : MonoBehaviour
 	{
 		selfPlayer.OnDestruction += PlayerDestroyed;
 		PlayerManager.instance.OnPlayersChanged += UpdatePlayers;
+
 		Vector2 spawnVel = new Vector2(Random.Range(xSpawnVelRange.x, xSpawnVelRange.y),Random.Range(ySpawnVelRange.x, ySpawnVelRange.y));
 		rb.velocity = spawnVel;
 		selfPlayer.invulnerable = true;
+
+		UpdatePlayers(PlayerManager.instance.GetPlayers()); // in case the player is spawned when no players are left
+
 	}
 	void PlayerDestroyed(){
 		if(grabbedPlayer){
